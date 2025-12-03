@@ -21,6 +21,5 @@ for l in lines:
         if position < -99: position += 100
 
     if position == 0: clicks += 1
-
-
+    
 print(clicks)
