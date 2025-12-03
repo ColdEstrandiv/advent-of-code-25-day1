@@ -1,6 +1,7 @@
+
 with open('input.txt', 'r') as file:
     lines = file.read().splitlines()
-
+    
 position = 50
 clicks = 0
 
@@ -14,10 +15,12 @@ for l in lines:
     
     if direction == 'R':
         position += num
-        if position > 100: position -= 100
+        if position > 99: position -= 100
     else:
         position -= num
-        if position < -100: position += 100
-        if position == 0: clicks += 1
+        if position < -99: position += 100
+
+    if position == 0: clicks += 1
+
 
 print(clicks)
